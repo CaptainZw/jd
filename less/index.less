@@ -1,0 +1,210 @@
+// 头部样式
+@import 'base.less';
+body {
+    max-width: 750px;
+    margin: 0 auto;
+}
+#header {
+    background-color: transparent;
+    padding: 7px 5px;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    max-width: 750px;
+    z-index: 999;
+    .icon-logo {
+        display: block;
+        width: 58px;
+        height: 23px;
+        background-position: 0 -110px;
+        margin-top: 5px;
+    }
+    form{
+        position: relative;
+        flex: 1;
+        margin: 0 10px;
+        i {
+            position: absolute;
+            width: 20px;
+			height: 20px;
+            background-position: -60px -110px;
+            left: 7px;
+            top: 6px;
+        }
+        input {
+            height: 30px;
+            border-radius: 15px;
+            width: 100%;
+            padding-left: 30px;
+        }
+    }
+    .login {
+        line-height: 30px;
+        color: white;
+    }
+}
+
+// 轮播图区域
+#slide {
+    width: 100%;
+    // padding-top: 44px;
+    img {
+        width: 100%;
+    }
+}
+
+// 导航区域
+#nav {
+    width: 100%;
+    padding: 10px;
+    .nav {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                width: 25%;
+                a {
+                    display: block;
+                    text-align: center;
+                    line-height: 30px;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 主体广告区域
+#main {
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f5f5;
+    padding-bottom: 50px;
+    .seckill {
+        background-color: #fff;
+        border:1px solid @border-color;
+    }
+    .seckill-title {
+        display: flex;
+        position: relative;
+        img {
+            width: 20px;
+            height: 25px;
+            margin: 2px;
+        }
+        .name {
+            line-height: 30px;
+            color: @main-color;
+            margin:0 10px;
+        }
+        .down-time {
+            line-height: 30px;
+            span {
+                text-align: center;
+                display: inline-block;
+                background-color: #000;
+                color: #fff;
+                height: 15px;
+                width: 15px;
+                line-height: 15px;
+                &:nth-child(3n){
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+        }
+        a {
+            line-height: 30px;
+            position: absolute;
+            right: 10px;
+        }
+    }
+    .seckill-content {
+        display: flex;
+        a {
+            flex:1;
+            text-align: center;
+            font-size: 12px;
+            img {
+                width: 110px;
+                height: 110px;
+            }
+            span{
+                color: @main-color;
+            }
+            del {
+                color: @border-color;
+            }
+            // &:nth-child(n+1){
+            //     border-left
+            // }
+        }
+    }
+
+    .jd-market {
+        background-color: #fff;
+        position: relative;
+        margin-bottom: 10px;
+        &:last-child{
+            margin-bottom: 0px;
+        }
+        h4 {
+            line-height: 30px;
+            font-weight: normal;
+            padding-left: 30px;
+            border-bottom: 1px solid @border-color;
+            &::before {
+                content: '';
+                width: 4px;
+                height: 15px;
+                background-color: @main-color;
+                position: absolute;
+                top: 7px;
+                left: 15px;
+            }
+        }
+        .product {
+            display: flex;
+            .left{
+                flex: 1;
+                img {
+                    width: 100%;
+                }
+            }
+            .right{
+                flex:1;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+      
+    }
+}
+
+//尾部区域
+#footer {
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 750px;
+    background-color: #fff;
+    ul {
+        display: flex;
+        li{
+            flex:1;
+            a {
+                display: block;
+                text-align: center;
+                img {
+                    width: 65px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}

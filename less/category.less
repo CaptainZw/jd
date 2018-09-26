@@ -1,0 +1,157 @@
+@import "base.less";
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    position: relative;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    padding: 40px 0px 50px;
+}
+
+#header {
+    background-color: #e5e5e5;
+    position: fixed;
+    height: 40px;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    .icon-back,
+    .icon-menu {
+        display: block;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        background-origin: content-box;
+        background-clip: content-box;
+    }
+    .icon-back {
+        background-position: -20px 0;
+    }
+    form {
+        position: relative;
+        flex: 1;
+        padding: 5px 10px;
+        .icon-search {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-position: -60px -110px;
+            left: 18px;
+            top: 10px;
+        }
+        input {
+            width: 100%;
+            height: 30px;
+            border-radius: 15px;
+            padding-left: 30px;
+        }
+    }
+    .icon-menu {
+        background-position: -60px 0;
+    }
+}
+
+#main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 750px;
+    overflow: hidden;
+    .category-left {
+        width: 85px;
+        height: 100%;
+        overflow: hidden;
+        .swiper-container {
+            height: 100%;
+            .swiper-slide {
+                height: auto; // overflow: hidden;
+                ul {
+                    li {
+                        text-align: center;
+                        &.active {
+                            a {
+                                color: @main-color;
+                            }
+                        }
+                        a {
+                            display: block;
+                            width: 85px;
+                            height: 46px;
+                            line-height: 46px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .category-right {
+        flex: 1;
+        padding: 10px;
+        height: 100%;
+        overflow: hidden;
+        .swiper-container {
+            height: 100%;
+            .swiper-slide {
+                height: auto;
+            }
+        }
+        .products {
+            ul {
+                padding: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    width: 33.33%;
+                    a {
+                        display: block;
+                        text-align: center;
+                        img {
+                            width: 70px;
+                        }
+                        span {
+                            display: block;
+                            font-size: 12px;
+                            margin: 5px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 750px;
+    background-color: #fff;
+    ul {
+        display: flex;
+        li {
+            flex: 1;
+            a {
+                display: block;
+                text-align: center;
+                img {
+                    width: 65px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}
